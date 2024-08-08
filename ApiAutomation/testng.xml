@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LibraryRegression" parallel="tests" thread-count="2">
+  <test name="LibraryTests" parallel="classes" thread-count="2">
+    <classes>
+      <class name="com.restAssured.apiAuto.Library"/>
+      <class name="com.restAssured.apiAuto.AppTest"/>
+      <class name="com.restAssured.apiAuto.AddNewPlace"/>
+    </classes>
+  </test>
+</suite>
