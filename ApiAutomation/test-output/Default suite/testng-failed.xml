@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restAssured.apiAuto.Library">
+      <class name="com.restAssured.apiAuto.SpecBuilder">
         <methods>
           <include name="setup"/>
-          <include name="getTheBookDetailsById"/>
+          <include name="addbookInLibrary"/>
         </methods>
-      </class> <!-- com.restAssured.apiAuto.Library -->
+      </class> <!-- com.restAssured.apiAuto.SpecBuilder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,7 @@
 package com.restAssured.apiAuto;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -13,8 +15,6 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import junit.framework.Assert;
-
 import static io.restassured.RestAssured.*;
 
 import java.util.Random;
@@ -33,7 +33,7 @@ public class Library {
 		String msg = jsonPath.getString("Msg");
 		id=id+jsonPath.getString("ID");
 		System.out.println("msg is::" + msg);
-		Assert.assertEquals("PASSED", "successfully added", msg);
+		AssertJUnit.assertEquals("PASSED", "successfully added", msg);
 	}
 
 	@Test(priority = 2)
@@ -42,7 +42,7 @@ public class Library {
 		Response getResponse = AddLibraryAction.getBookWithId(id);
 		JsonPath jsonPath = new JsonPath(getResponse.asPrettyString());
 		author = author+jsonPath.getString("[0].author");
-	    Assert.assertEquals("Author Name Matched","Bibhu Pandey",author);
+	    AssertJUnit.assertEquals("Author Name Matched","Bibhu Pandey",author);
 	}
 	@Test(priority = 3)
 	public void getTheBookDetailsByAuthorName() throws JsonProcessingException {

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="LibraryRegression" parallel="tests" thread-count="2">
-  <test name="LibraryTests" parallel="classes" thread-count="2">
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> -->
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
+      <class name="com.restAssured.apiAuto.LibrarySchemaValidation"/>
+      <class name="com.restAssured.apiAuto.SpecBuilder"/>
       <class name="com.restAssured.apiAuto.Library"/>
-      <class name="com.restAssured.apiAuto.AppTest"/>
       <class name="com.restAssured.apiAuto.AddNewPlace"/>
     </classes>
-  </test>
-</suite>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
